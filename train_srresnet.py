@@ -70,7 +70,7 @@ def main():
         train(train_loader=train_loader,model=model,criterion=criterion,optimizer=optimizer,epoch=epoch)
 
         # Save checkpoint
-        torch.save({'epoch': epoch,'model': model,'optimizer': optimizer},'checkpoint_srresnet_4X.pth.tar')
+        torch.save({'epoch': epoch,'model': model,'optimizer': optimizer},'checkpoint_srresnet.pth.tar')
 
 
 def train(train_loader, model, criterion, optimizer, epoch):
