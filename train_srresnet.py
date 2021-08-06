@@ -8,7 +8,7 @@ from datasets import SRDataset
 from utils import *
 
 # Data parameters
-base_path = 'C:/Data/Exeter/DS_with_AI/Final Project/SRCNN/' 
+base_path = './' 
 data_folder = base_path+'Dataset/train' # base path of files
 crop_size = 96  # crop size of target HR images
 scaling_factor = 4  # Upscaling factor for which model being created
