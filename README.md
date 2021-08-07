@@ -1,5 +1,3 @@
-# Report and code under development
-
 # Image-Super-Resolution
 Super resolve using advanced Computer Vision techniques which can generate high quality remote sensing images from sources such as satellites, drones, and aircraft.
 
@@ -71,4 +69,4 @@ Statistics
 :-------------------------:
 ![](Images/img_14.jpg)
 
-
+References are added to reference.md file.
