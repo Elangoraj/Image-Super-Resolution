@@ -21,7 +21,7 @@ To model design is an Super resolution RESNET network. It consist of multiple co
 
 Model Architecture
 :-------------------------:
-![](Images/img_7.jpg)
+![](Images/sisr_arch_1.jpeg)
 
 The following image shows the input to the super resolution model (2x, 4x) and corresponding output images.
 
