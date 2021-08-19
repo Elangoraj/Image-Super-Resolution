@@ -129,3 +129,31 @@ res.aov <- aov(SSIM ~ Scene, data = res_2x_scene)
 summary(res.aov)
 TukeyHSD(res.aov)
 
+install.packages("ggridges")
+library(ggridges)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(forcats)
+
+# Load dataset from github
+
+errors_om <- read.csv('other_models/om_errors.csv')
+
+m1 <- errors_om %>% filter(errors_om$Scale == "4x")
+
+# Plot
+m1 %>%
+  mutate(text = fct_reorder(Model, PSNR)) %>%
+  ggplot( aes(y=Model, x=PSNR,  fill=Model)) +
+  geom_density_ridges(alpha=0.6, stat="binline", bins=40) +
+  theme_ridges() +
+  theme(
+    legend.position="none",
+    panel.spacing = unit(0.1, "lines"),
+    strip.text.x = element_text(size = 8)
+  ) +
+  xlab("") +
+  ylab("Assigned Probability (%)")
+
+
